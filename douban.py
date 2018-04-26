@@ -14,7 +14,7 @@ if os.path.exists(path):
     os.remove(path)
 writer = csv.writer(open(path, 'w', encoding='utf-8', newline=''))
 writer.writerow(columns)
-def craler(i,page):
+def crawler(i,page):
     params = {
         'start': page*25,
         'filter': ''
@@ -49,5 +49,5 @@ def craler(i,page):
 if __name__ == '__main__':
     i = 1
     for page in range(10):
-        craler(i,page)
+        crawler(i,page)
         i = i + 25
